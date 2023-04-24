@@ -2,7 +2,7 @@
 from zmqRemoteApi import RemoteAPIClient
 import keyboard
 
-client = RemoteAPIClient('localhost', 23000)
+client = RemoteAPIClient('192.168.1.65', 23000)
 
 print('Program started')
 sim = client.getObject('sim')
@@ -26,13 +26,13 @@ setBubbleRobVelocity(0.0, 0.0)
 while True:
     if keyboard.is_pressed('w'):
         setBubbleRobVelocity(1.0, 1.0)
-    elif keyboard.is_pressed('z'):
+    elif keyboard.is_pressed('s'):
         setBubbleRobVelocity(-1.0, -1.0)
     elif keyboard.is_pressed('a'):
         setBubbleRobVelocity(-1.0, 1.0)
-    elif keyboard.is_pressed('s'):
+    elif keyboard.is_pressed('d'):
         setBubbleRobVelocity(1.0, -1.0)
-    elif keyboard.is_pressed('q'):
+    elif keyboard.is_pressed('w'):
         # stop simulation
         sim.stopSimulation()
     else:
