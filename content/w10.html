@@ -158,6 +158,19 @@ img.add_border {
 <p><strong>3.What are some common use cases for zmqRemoteAPI in CoppeliaSim?</strong></p>
 <p>可以讓用戶利用編輯程式語言控制物件</p>
 <p><strong>4.What are the advantages and disadvantages of using zmqRemoteAPI compared to other methods of communication between Python and CoppeliaSim?</strong></p>
+<p>ZmqRemoteAPI 是一種通訊協定，允許 Python 腳本使用 ZeroMQ 套接字在網絡上與 CoppeliaSim 進行交互。以下是使用 zmqRemoteAPI 與其他 Python 與 CoppeliaSim 通訊方法相比的優點和缺點：</p>
+<p>優點：</p>
+<ol>
+<li>高性能：ZmqRemoteAPI 設計用於高性能和低延遲，適合實時仿真和控制應用。</li>
+<li>彈性：該協議允許 Python 與 CoppeliaSim 之間進行雙向通訊，這意味著 Python 腳本不僅可以控制仿真，還可以從仿真中接收數據。</li>
+<li>可移植性：該協議獨立於平台，可在不同的操作系統和架構上使用。</li>
+<li>使用簡便：該協議提供了一個簡單且一致的 API，用於與 CoppeliaSim 進行通訊。</li>
+</ol>
+<p>缺點：</p>
+<ol>
+<li>學習成本：使用該協議需要一定的學習成本，特別是對於沒有使用過 ZeroMQ 的用戶。</li>
+<li>程序錯誤：由於該協議允許 Python 腳本直接控制 CoppeliaSim，因此在編寫程序時需要小心處理，以避免出現錯誤。</li>
+</ol>
 <p><strong>5.Can you give an example of a project or task that you could complete using zmqRemoteAPI in CoppeliaSim?</strong></p>
 <p>在足球場中的感測器，四人連機驅動bubbleRob</p>
 </div>
