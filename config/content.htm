@@ -823,16 +823,20 @@ Plotly.newPlot('plot', data, layout)
 <p>zmqRemoteAPI 為 CoppeliaSim 的使用者提供了一種靈活而有效的方法，將 CoppeliaSim 與外部軟件和硬件系統（如機器人控制器、傳感器和實時數據採集系統）集成起來。這使得使用者可以構建複雜的仿真和控制系統，這些系統可以與現實世界進行交互。</p>
 <p>就如同我們協同作業利用zmqRemoteAPI連線到主機(組長)的CoppeliaSim並操控機器人。</p>
 <p><strong>2.How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</strong></p>
-<p><strong>一.匯入模組<br/>二.將模組拉入小白窗並分別更改IP位置，連至主要控制的電腦<br/>三.小白窗啟動，向CoppeliaSim發送啟動遠端API<br/>四.待連接後即可使用遠端 API 向 CoppeliaSim 發送命令</strong></p>
+<p>一.匯入模組<br/>二.將模組拉入小白窗並分別更改IP位置，連至主要控制的電腦<br/>三.小白窗啟動，向CoppeliaSim發送啟動遠端API<br/>四.待連接後即可使用遠端 API 向 CoppeliaSim 發送命令</p>
 <p><strong>3.What are some common use cases for zmqRemoteAPI in CoppeliaSim?</strong></p>
-<p>可以讓用戶利用編輯程式語言控制物件</p>
+<p>1.遠程控制 CoppeliaSim 中的機器人：使用 ZMQ Remote API，可以遠程控制 CoppeliaSim 中的機器人，例如移動機器人，設置機器人的目標位置和速度等等。</p>
+<p>2.遠程監控 CoppeliaSim 中的仿真場景：使用 ZMQ Remote API，可以監控 CoppeliaSim 中的仿真場景，例如讀取機器人的位置和速度，或者檢測碰撞和物體之間的交互作用。可以實時檢查仿真結果，並根據需要進行調整。</p>
+<p>3.遠程編程 CoppeliaSim 中的機器人：使用 ZMQ Remote API，可以通過編寫代碼來控制 CoppeliaSim 中的機器人。可以使用任何支援 ZMQ 的編程語言（例如 Python 或 C++）來編寫代碼，而不需要在 CoppeliaSim 中使用其內置的編程語言。</p>
+<p>4.遠程數據記錄和分析：使用 ZMQ Remote API，可以將 CoppeliaSim 中的仿真數據傳輸到遠程計算機上進行記錄和分析。</p>
 <p><strong>4.What are the advantages and disadvantages of using zmqRemoteAPI compared to other methods of communication between Python and CoppeliaSim?</strong></p>
 zmqRemoteAPI (ZeroMQ Remote API) 是 CoppeliaSim 的一個消息接口，支持在 CoppeliaSim 和外部應用程序（例如 Python）之間進行通信。</div>
 <div><br/>使用 zmqRemoteAPI優點及缺點：</div>
 <div><br/>優點：<br/><br/>1.高性能：ZmqRemoteAPI 專為高性能通信而設計，這對於需要在 Python 和 CoppeliaSim 之間進行高速數據傳輸的應用程序非常有利。<br/><br/>2.跨平台兼容性：ZmqRemoteAPI 兼容所有主要操作系統，包括 Windows、Linux 和 macOS。<br/><br/>3.易於使用：ZmqRemoteAPI 提供了一個簡單易用的 Python 接口，這對於不熟悉遠程 API 概念的開發人員來說可能是有益的。<br/><br/>4.支持多種編程語言：ZmqRemoteAPI支持多種編程語言，包括Python、C/C++、Java等。<br/><br/>5.靈活：ZmqRemoteAPI 在可在 Python 和 CoppeliaSim 之間傳輸的數據類型方面提供了很大的靈活性，包括數組、字符串等。<br/><br/>6.攜帶方便：只要安裝在隨身碟，就可以使用了。<br/><br/>缺點：<br/><br/>1.有限的文檔：與 CoppeliaSim 的其他遠程 API 解決方案相比，ZmqRemoteAPI 的文檔相對有限，這可能會使新用戶難以上手。<br/><br/>2.需要安裝額外的軟件：ZmqRemoteAPI 需要安裝 ZeroMQ，這對一些開發人員來說可能是一個入門障礙。<br/><br/>3.需要一些編程知識：ZmqRemoteAPI 需要一些編程知識才能有效使用，這對於不熟悉 Python 或遠程 API 概念的個人來說可能具有挑戰性。<br/><br/>4.調試可能很困難：調試 ZmqRemoteAPI 可能具有挑戰性，尤其是涉及與網絡連接或協議不匹配相關的問題時。<br/><br/>5.需要連接同一網路才能操作：否則連結不同網路，更改乙太網路還是無法連動到主機，造成無法遠端一起操作。</div>
 <div><br/>
 <p><strong>5.Can you give an example of a project or task that you could complete using zmqRemoteAPI in CoppeliaSim?</strong></p>
-<p>在足球場中的感測器，四人連機驅動bubbleRob</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/oyxoHrMTHr8" title="YouTube video player" width="560"></iframe></p>
+<p></p>
 <p></p>
 <p><span style="background-color: #99ccff;">第1題由41023102王郁淳負責</span></p>
 <p><span style="background-color: #99ccff;">第2題由41023105李宛妮負責</span></p>
