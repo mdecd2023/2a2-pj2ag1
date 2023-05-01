@@ -2,18 +2,11 @@
 from zmqRemoteApi import RemoteAPIClient
 import keyboard
 
-client = RemoteAPIClient('192.168.1.65', 23000)
+client = RemoteAPIClient('192.168.50.159', 23000)
 
 print('Program started')
 sim = client.getObject('sim')
 
-# Define the size and position of the cuboid
-size = [0.1, 0.2, 0.3]
-position = [0, 0, 0.15]
-
-# Create the cuboid
-cuboid = sim.createPureShape(0, 8, size, 1, None)
-sim.setObjectPosition(cuboid, -1, position)
 
 sim.startSimulation()
 print('Simulation started')
