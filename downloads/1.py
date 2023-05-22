@@ -2,10 +2,11 @@
 from zmqRemoteApi import RemoteAPIClient
 import keyboard
 
-client = RemoteAPIClient('192.168.50.159', 23000)
+client = RemoteAPIClient('172.20.10.5', 23000)
 
 print('Program started')
 sim = client.getObject('sim')
+
 
 
 sim.startSimulation()
@@ -16,7 +17,8 @@ def setBubbleRobVelocity(leftWheelVelocity, rightWheelVelocity):
     rightMotor = sim.getObject('/rightMotor1')
     sim.setJointTargetVelocity(leftMotor, leftWheelVelocity)
     sim.setJointTargetVelocity(rightMotor, rightWheelVelocity)
-
+    
+  
 '''
 # Example usage 1:
 setBubbleRobVelocity(1.0, 1.0)
